@@ -109,7 +109,7 @@ function NavBar() {
       <div className="flex items-center">
         {/* Profile picture on the right */}
         <Image
-          src="/profile.jpghttps://n0w8etiysbkfl9us.public.blob.vercel-storage.com/IMG-20250715-WA0037.jpg"
+          src="https://n0w8etiysbkfl9us.public.blob.vercel-storage.com/IMG-20250715-WA0037.jpg"
           alt="Profile"
           width={48}
           height={48}
@@ -472,6 +472,7 @@ export default function Home() {
                       width: "auto",
                       height: "auto",
                     }}
+                    unoptimized // If your images are external and not in next.config.js domains
                   />
                 );
               })()}
