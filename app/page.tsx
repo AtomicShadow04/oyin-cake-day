@@ -109,7 +109,7 @@ function NavBar() {
       <div className="flex items-center">
         {/* Profile picture on the right */}
         <Image
-          src="/profile.jpg" // Place your profile picture in public/profile.jpg
+          src="/profile.jpghttps://n0w8etiysbkfl9us.public.blob.vercel-storage.com/IMG-20250715-WA0037.jpg"
           alt="Profile"
           width={48}
           height={48}
