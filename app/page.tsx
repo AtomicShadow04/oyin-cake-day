@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import { FaRegHeart } from "react-icons/fa6";
 
 // Hardcoded video and image URLs
 const VIDEO_URL =
@@ -105,16 +106,6 @@ function NavBar() {
         >
           Oyin&apos;s Cake Day
         </span>
-      </div>
-      <div className="flex items-center">
-        {/* Profile picture on the right */}
-        <Image
-          src="https://n0w8etiysbkfl9us.public.blob.vercel-storage.com/IMG-20250715-WA0037.jpg"
-          alt="Profile"
-          width={48}
-          height={48}
-          className="rounded-full border-2 border-white shadow-md object-cover"
-        />
       </div>
     </nav>
   );
@@ -523,44 +514,22 @@ export default function Home() {
           className="relative w-full flex flex-col items-center mb-4"
           style={{ minHeight: 340 }}
         >
-          {/* Blue heart border with text inside */}
+          {/* Blue heart icon and message side by side */}
           <div
             className="relative flex items-center justify-center w-full"
             style={{ minHeight: 340 }}
           >
-            <svg
-              width="380"
-              height="320"
-              viewBox="0 0 380 320"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="drop-shadow-lg"
-              style={{ maxWidth: "90vw", maxHeight: "90vw", display: "block" }}
-            >
-              <path
-                d="M190 300
-                  C 20 180, 20 60, 190 80
-                  C 360 60, 360 180, 190 300
-                  Z"
-                fill="white"
-                fillOpacity="0.8"
-                stroke="#2563eb"
-                strokeWidth="10"
-                filter="drop-shadow(0 4px 16px #3b82f6)"
-              />
-            </svg>
-            <div
-              className="absolute inset-0 flex flex-col items-center justify-center px-8"
-              style={{
-                pointerEvents: "auto",
-                zIndex: 2,
-              }}
-            >
+            <FaRegHeart
+              size={120}
+              className="text-blue-600 drop-shadow-lg mr-8"
+              style={{ flexShrink: 0 }}
+            />
+            <div>
               <div className="text-blue-800 text-lg font-semibold text-center max-w-lg">
                 I hope you enjoyed this experience as much as I did!
                 <br />I cant wait to see you in school, my love.
                 <br />
-                P.S. I have a gift for you but im not going to spoil it
+                P.S. I have a gift for you but I&apos;m not going to spoil it
                 <br />
                 You have to come to school to get it
                 <br />
