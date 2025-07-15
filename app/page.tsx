@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 
 // Hardcoded video and image URLs
 const VIDEO_URL =
@@ -102,15 +103,17 @@ function NavBar() {
             letterSpacing: "1px",
           }}
         >
-          Oyin's Cake Day
+          Oyin&apos;s Cake Day
         </span>
       </div>
       <div className="flex items-center">
         {/* Profile picture on the right */}
-        <img
+        <Image
           src="/profile.jpg" // Place your profile picture in public/profile.jpg
           alt="Profile"
-          className="w-12 h-12 rounded-full border-2 border-white shadow-md object-cover"
+          width={48}
+          height={48}
+          className="rounded-full border-2 border-white shadow-md object-cover"
         />
       </div>
     </nav>
@@ -209,7 +212,7 @@ export default function Home() {
               style={{ color: "#1e3a8a", fontSize: "1.25rem", fontWeight: 500 }}
             >
               I wish I could be there with you right so I created this to reach
-              you in a very "funbi" way
+              you in a very &quot;funbi&quot; way
             </h3>
             <h3
               style={{ color: "#1e3a8a", fontSize: "1.25rem", fontWeight: 500 }}
@@ -232,8 +235,8 @@ export default function Home() {
           <div className="text-blue-800 text-lg font-semibold text-center max-w-xl">
             {/* Write your short message here */}
             Hey love, you have come to the first part.{" "}
-            <p>It's a letter from me to you; a well thought one.</p> And before
-            you get ahead of yourself, I didnt use ChatGPT
+            <p>It&apos;s a letter from me to you; a well thought one.</p> And
+            before you get ahead of yourself, I didnt use ChatGPT
             <p>Enjoy!!</p>
           </div>
         </div>
@@ -285,6 +288,7 @@ export default function Home() {
             }}
           >
             <div
+              ref={modalContentRef}
               className="bg-white rounded-3xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border-4 border-blue-300 flex flex-col items-center"
               style={{
                 position: "relative",
@@ -456,9 +460,11 @@ export default function Home() {
                     Your browser does not support the video tag.
                   </video>
                 ) : (
-                  <img
+                  <Image
                     src={url}
                     alt={`Memory ${currentMediaIndex + 1}`}
+                    width={800}
+                    height={600}
                     className="rounded-2xl shadow-lg border-2 border-blue-200"
                     style={{
                       maxWidth: "100%",
