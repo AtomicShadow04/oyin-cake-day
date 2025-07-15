@@ -563,9 +563,9 @@ export default function Home() {
                 <br />
                 You have to come to school to get it
                 <br />
-                Have a wondeful day my baby
+                Have a wonderful day my baby
                 <br />
-                See you very soon.
+                See you very soon
               </div>
             </div>
           </div>
